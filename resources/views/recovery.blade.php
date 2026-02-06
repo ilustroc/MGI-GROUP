@@ -10,7 +10,7 @@
                 <img
                     src="{{ asset('img/MGI_Recovery.png') }}"
                     alt="MGI Recovery"
-                    class="w-[340px] md:w-[420px] h-auto object-contain"
+                    class="w-[340px] md:w-[330px] h-auto object-contain"
                 />
             </div>
         </div>
