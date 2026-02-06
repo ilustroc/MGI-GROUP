@@ -28,7 +28,7 @@
                 $recovery = [
                     [
                         'title' => 'JUSTO PAZ',
-                        'desc'  => 'Servicios de conciliación a Personas Naturales, Personas Jurídicas y conciliaciones con el Estado',
+                        'desc'  => 'Servicios de conciliación a Personas Naturales, Personas Jurídicas y conciliaciones con el Estado.',
                         'logo'  => asset('img/Justo-Paz.png'),
                         'url'   => 'https://www.justopaz.pe/',
                     ],
