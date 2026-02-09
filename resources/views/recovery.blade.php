@@ -72,7 +72,7 @@
                             <img src="{{ $r['logo'] }}" alt="{{ $r['title'] }}"
                                 class="h-12 w-auto object-contain" />
 
-                            <a href="{{ $r['url'] }}"
+                            <a href="{{ $r['url'] }}" target="_blank" rel="noopener noreferrer"
                             class="text-mgi-red text-[10px] font-bold hover:underline">
                             Ir a la web
                             </a>

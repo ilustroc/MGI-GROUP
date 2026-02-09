@@ -83,7 +83,7 @@
                                     class="h-12 w-auto object-contain"
                                 />
 
-                                <a href="{{ $s['url'] }}"
+                                <a href="{{ $s['url'] }}" target="_blank" rel="noopener noreferrer"
                                    class="text-mgi-red text-[10px] font-bold hover:underline">
                                     Ir a la web
                                 </a>
