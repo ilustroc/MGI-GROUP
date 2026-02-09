@@ -10,10 +10,10 @@
                         <img
                             src="{{ asset('img/Isologo_MGI_blanco.png') }}"
                             alt="Isologo MGI"
-                            class="h-12 w-12 md:h-16 md:w-16 object-contain"
+                            class="h-12 w-12 md:h-18 md:w-12 object-contain"
                         />
 
-                        <h2 class="font-akzidenz font-bold text-4xl md:text-5xl leading-none">
+                        <h2 class="font-akzidenz font-bold text-4xl md:text-3xl leading-none">
                             Contáctanos
                         </h2>
                     </div>

@@ -15,11 +15,38 @@
 </head>
 <body class="bg-white antialiased">
     <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-end space-x-10 text-xs font-bold tracking-widest text-gray-500">
-            <a href="{{ route('home') }}" class="hover:text-mgi-red transition">HOME</a>
-            <a href="{{ route('recovery') }}" class="hover:text-mgi-red transition">MGI Recovery</a>
-            <a href="{{ route('services') }}" class="hover:text-mgi-red transition">MGI Services</a>
-            <a href="{{ route('contacto') }}" class="hover:text-mgi-red transition">Contacto</a>
+        <div class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between">
+            
+            {{-- LOGO (izquierda) --}}
+            @php
+                $logo = asset('img/MGI_Group_negro.png?v=2');
+
+                if (request()->routeIs('recovery', 'recovery.*')) {
+                    $logo = asset('img/MGI_Recovery_negro.png?v=2');
+                } elseif (request()->routeIs('services', 'services.*')) {
+                    $logo = asset('img/MGI_Services_negro.png?v=2');
+                } elseif (request()->routeIs('contacto', 'contacto.*')) {
+                    $logo = asset('img/MGI_Group_negro.png?v=2');
+                }
+            @endphp
+
+            <a href="{{ route('home') }}" class="flex items-center">
+                <img
+                    src="{{ $logo }}"
+                    alt="MGI Group"
+                    class="h-9 md:h-12 w-auto object-contain"
+                />
+            </a>
+
+
+            {{-- LINKS (derecha) --}}
+            <div class="flex items-center space-x-10 text-xs font-bold tracking-widest text-gray-500">
+                <a href="{{ route('home') }}" class="hover:text-mgi-red transition">HOME</a>
+                <a href="{{ route('recovery') }}" class="hover:text-mgi-red transition">MGI Recovery</a>
+                <a href="{{ route('services') }}" class="hover:text-mgi-red transition">MGI Services</a>
+                <a href="{{ route('contacto') }}" class="hover:text-mgi-red transition">Contacto</a>
+            </div>
+
         </div>
     </nav>
 
