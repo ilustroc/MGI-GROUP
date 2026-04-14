@@ -1,41 +1,47 @@
 @import "tailwindcss";
 
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
-@source "../../storage/framework/views/*.php";
-@source "../**/*.blade.php";
-@source "../**/*.js";
-
-@font-face {
-  font-family: "AkzidenzGroteskPro";
-  src: url("/fonts/akzidenzgoteskpro_regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "AkzidenzGroteskPro";
-  src: url("/fonts/akzidenzgoteskpro_bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@layer utilities {
-  .font-akzidenz { font-family: "AkzidenzGroteskPro", ui-sans-serif, system-ui; }
-  .font-montserrat { font-family: "Montserrat", ui-sans-serif, system-ui; }
-}
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&family=Merriweather:ital,wght@0,300;1,300;1,400&display=swap');
 
 @theme {
-  --color-mgi-red: #7a0000;
-  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --color-mgi-red: #B00000;
+  --color-mgi-red-dark: #7A0000;
+  --color-mgi-orange: #C4622D;
+  --color-mgi-black: #0E0E0E;
+  --color-mgi-gray: #F0F0F0;
+  
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-merriweather: 'Merriweather', serif;
 }
 
 @layer components {
-  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación personalizada para el formulario */
+input:focus, select:focus, textarea:focus {
+    @apply border-mgi-orange;
+}
+
+/* Clases específicas para el estilo del footer solicitado */
+.ft-logo {
+    @apply text-xs font-bold tracking-[3px] text-white/30 uppercase;
+}
+
+.ft-logo span {
+    @apply text-mgi-orange;
+}
+
+.ft-link {
+    @apply text-[10px] font-normal text-white/20 no-underline tracking-wider transition-colors hover:text-mgi-orange;
+}
+
+.ft-copy {
+    @apply text-[10px] text-white/10 font-light;
 }
